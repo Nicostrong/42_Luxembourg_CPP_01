@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 14:59:07 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/12 16:14:05 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/12 16:44:11 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,14 @@ class Zombie
 
 	public:
 
+		Zombie();
 		Zombie( const std::string& name );
 		~Zombie();
 
 		void			announce( void ) const;
+		void			setName( const std::string name );
 };
 
-Zombie*			newZombie( std::string name );
-void			randomChump( std::string name );
+Zombie*			zombieHorde( int N, std::string name);
 
 #endif

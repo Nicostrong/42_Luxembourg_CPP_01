@@ -6,7 +6,7 @@
 #    By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/16 09:35:29 by nfordoxc          #+#    #+#              #
-#    Updated: 2025/02/12 15:56:41 by nfordoxc         ###   Luxembourg.lu      #
+#    Updated: 2025/02/12 16:19:26 by nfordoxc         ###   Luxembourg.lu      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,13 +25,13 @@ DEB_OPT			=	--tool=memcheck \
 					--show-leak-kinds=all
 
 
-ARG0			=	"salut mon amis comment vas-tu ??"
+ARG0			=	
 
-ARG1			=	"premier mot " "deuxieme mot " "troisieme mot"
+ARG1			=	
 
-ARG2			=	"parle plus fort je suis sourd ..."
+ARG2			=	
 
-ARG3			=	Damnit " ! " "Sorry students, I thought this thing was off."
+ARG3			=	
 
 ARG4			=	
 
@@ -62,11 +62,13 @@ MYLIBS_BONUS	=
 #	Mandatory part															   #
 ################################################################################
 
-SRC				=	megaphone.cpp
+SRC				=	main.cpp \
+					Zombie.cpp \
+					zombieHorde.cpp 
 
 OBJ				=	$(SRC:.cpp=.o)
 
-NAME			=	megaphone
+NAME			=	Horde
 
 ################################################################################
 #	Bonus part																   #

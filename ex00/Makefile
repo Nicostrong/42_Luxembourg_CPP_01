@@ -6,7 +6,7 @@
 #    By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/16 09:35:29 by nfordoxc          #+#    #+#              #
-#    Updated: 2025/02/12 14:59:58 by nfordoxc         ###   Luxembourg.lu      #
+#    Updated: 2025/02/12 16:19:39 by nfordoxc         ###   Luxembourg.lu      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,7 @@ SRC				=	main.cpp \
 
 OBJ				=	$(SRC:.cpp=.o)
 
-NAME			=	BraiiiiiiiiiiiiinnnnnnnnnnnzzzzzzZ
+NAME			=	Zombie
 
 ################################################################################
 #	Bonus part																   #
@@ -150,7 +150,7 @@ SLEEP_TIME		=	0.001
 
 define compile_c_to_o
 	@$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE)+1))))
-	$(CXX) $(CXXFLAGS) $(CXX_OPT) -c -o $@ $<
+	@$(CXX) $(CXXFLAGS) $(CXX_OPT) -c -o $@ $<
 	@printf $(BLUE)"\r\033[K\033[0KCompiling files => $< ["
 	@for i in $$(seq 0 $$(($(CURRENT_FILE)*100/$(NUM_FILES)))); do \
 		printf $(YELLOW)"="; \
