@@ -25,9 +25,9 @@ DEB_OPT			=	--tool=memcheck \
 					--show-leak-kinds=all
 
 
-ARG0			=	
+ARG0			=	Makefile NAME TOTO
 
-ARG1			=	
+ARG1			=	Makefile.replace TOTO NAME
 
 ARG2			=	
 
@@ -220,7 +220,13 @@ $(NAME):	$(OBJ)
 
 deb:		$(NAME)
 	@echo "$(BBLUE)==========	RUN DEBUG MODE	==========$(RESET)"
-	@$(DEB) $(DEB_OPT) ./$(NAME)
+ifeq ($(arg),ARG0)
+	$(DEB) $(DEB_OPT) ./$(NAME) $(ARG0)
+else ifeq ($(arg),ARG1)
+	$(DEB) $(DEB_OPT) ./$(NAME) $(ARG1)
+else
+	@echo "$(RESET)Usage: make deb arg=ARG0|ARG1"
+endif
 
 clean:
 	$(call delete_progress, *.o)
