@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sed.hpp                                            :+:      :+:    :+:   */
+/*   Sed.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 13:48:28 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/13 14:46:23 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/18 08:27:03 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SED_HPP
 # define SED_HPP
 
-#include <iostream>
-#include <string>
-#include <fstream>
+# include <iostream>
+# include <string>
+# include <fstream>
+# include <cstdlib>
 
 class	Sed
 {
@@ -27,7 +28,7 @@ class	Sed
 		std::string		_outFilename;
 
 		std::string		replaceSubstring( const std::string& line) const;
-		void			readAndReplace( void ) const;
+		int				readAndReplace( void ) const;
 
 	public:
 

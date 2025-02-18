@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 13:48:37 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/13 14:54:19 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/18 08:28:34 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ std::string	Sed::replaceSubstring( const std::string& line ) const
  *	the word to replace by the new word and write the new line in the file
  *	_outFilename.
  */
-void	Sed::readAndReplace( void ) const
+int	Sed::readAndReplace( void ) const
 {
 	std::ifstream	inFile(_filename.c_str());
 	std::ofstream	outFile(_outFilename.c_str());
@@ -76,13 +76,13 @@ void	Sed::readAndReplace( void ) const
 	if (!inFile.is_open())
 	{
 		std::cerr << "Error: could not open file " << _filename << std::endl;
-		exit(1);
+		return (1);
 	}
 
 	if (!outFile.is_open())
 	{
 		std::cerr << "Error: could not open file " << _outFilename << std::endl;
-		exit(1);
+		return (1);
 	}
 
 	while (std::getline(inFile, line))
@@ -91,7 +91,7 @@ void	Sed::readAndReplace( void ) const
 	outFile.close();
 	inFile.close();
 
-	return;
+	return (0);
 }
 
 /*
@@ -99,6 +99,10 @@ void	Sed::readAndReplace( void ) const
  */
 void	Sed::replace( void ) const
 {
-	readAndReplace();
+	if (!readAndReplace())
+	{
+		std::cout << "File processed successfully." << std::endl;
+		std::cout << "Output file: " << this->_outFilename << std::endl;
+	}
 	return ;
 }
