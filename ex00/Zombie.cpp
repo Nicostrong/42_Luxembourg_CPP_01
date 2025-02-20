@@ -6,12 +6,19 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 14:58:56 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/12 16:15:07 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 10:09:38 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
+/*******************************************************************************
+ *						CONSTRUCTOR / DESTRUCTOR							   *
+ ******************************************************************************/
+
+/*
+ *	Constructor with parameter
+ */
 Zombie::Zombie( const std::string& name ) : _name( name )
 {
 	std::cout	<< GREEN
@@ -22,6 +29,9 @@ Zombie::Zombie( const std::string& name ) : _name( name )
 				<< std::endl;
 }
 
+/*
+ *	Destructor
+ */
 Zombie::~Zombie( void )
 {
 	std::cout	<< RED
@@ -31,6 +41,13 @@ Zombie::~Zombie( void )
 				<< std::endl;
 }
 
+/*******************************************************************************
+ *								METHOD 										   *
+ ******************************************************************************/
+
+/*
+ *	Announce method to say something
+ */
 void	Zombie::announce( void ) const
 {
 	std::cout	<< YELLOW

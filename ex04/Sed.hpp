@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 13:48:28 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/18 08:27:03 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 10:17:07 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,19 @@ class	Sed
 		std::string		_s2;
 		std::string		_outFilename;
 
+		/*	Method	*/
 		std::string		replaceSubstring( const std::string& line) const;
 		int				readAndReplace( void ) const;
 
 	public:
 
+		/*	Constructor / Destructor	*/
 		Sed( std::string filename, std::string s1, std::string s2 );
 		~Sed( void );
 
+		/*	Method	*/
 		void	replace( void ) const;
+		
 };
 
 #endif

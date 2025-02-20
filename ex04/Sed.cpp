@@ -6,11 +6,15 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 13:48:37 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/18 08:28:34 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 10:16:30 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Sed.hpp"
+
+/*******************************************************************************
+ *						CONSTRUCTOR / DESTRUCTOR							   *
+ ******************************************************************************/
 
 /*
  *	Constructor of Sed object
@@ -33,6 +37,10 @@ Sed::~Sed( void )
 {
 	return ;
 }
+
+/*******************************************************************************
+ *								METHOD 										   *
+ ******************************************************************************/
 
 /*
  *	replaceSubstring create a new string with the substitution of the word to 
@@ -67,7 +75,7 @@ std::string	Sed::replaceSubstring( const std::string& line ) const
  *	the word to replace by the new word and write the new line in the file
  *	_outFilename.
  */
-int	Sed::readAndReplace( void ) const
+int			Sed::readAndReplace( void ) const
 {
 	std::ifstream	inFile(_filename.c_str());
 	std::ofstream	outFile(_outFilename.c_str());
@@ -97,7 +105,7 @@ int	Sed::readAndReplace( void ) const
 /*
  *	Call the methode for substitute all ocurence of s1 by s2 on _filename
  */
-void	Sed::replace( void ) const
+void		Sed::replace( void ) const
 {
 	if (!readAndReplace())
 	{

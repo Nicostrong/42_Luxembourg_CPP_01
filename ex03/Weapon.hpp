@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 10:16:17 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/13 11:05:07 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 10:15:27 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,15 @@ class	Weapon
 
 	public:
 
+		/*	Constructor / Destructor	*/
 		Weapon( std::string type );
 		~Weapon( void );
 
-		const std::string&	getType( void ) const;
+		/*	Setter	*/
 		void				setType( const std::string& type );
+		
+		/*	Getter	*/
+		const std::string&	getType( void ) const;
 };
 
 #endif

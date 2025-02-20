@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 10:16:43 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/13 11:09:35 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 10:13:22 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ class	HumanA
 
 	public:
 
+		/*	Constructor / Destructor	*/
 		HumanA( std::string name, Weapon& weapon );
 		~HumanA( void );
 
+		/*	Method	*/
 		void	attack( void ) const;
 };
 

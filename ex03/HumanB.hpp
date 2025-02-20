@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 10:17:05 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/13 11:09:35 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 10:14:00 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ class	HumanB
 
 	public:
 
+		/*	Constructor / Destructor	*/
 		HumanB( std::string name );
 		~HumanB( void );
 
+		/*	Method	*/
 		void	attack( void ) const;
 		void	setWeapon( Weapon& weapon );
 };

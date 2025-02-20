@@ -6,11 +6,15 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 10:17:13 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/13 13:46:13 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 10:13:38 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
+
+/*******************************************************************************
+ *						CONSTRUCTOR / DESTRUCTOR							   *
+ ******************************************************************************/
 
 /*
  *	Constructor of the class HumanA _weapon is NULL
@@ -27,6 +31,10 @@ HumanB::~HumanB( void )
 {
 	return ;
 }
+
+/*******************************************************************************
+ *								METHOD 										   *
+ ******************************************************************************/
 
 /*
  *	Methode attack print the name of HumanA and attack with her own weapon

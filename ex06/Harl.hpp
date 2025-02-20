@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 14:56:06 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/13 15:23:59 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 10:20:05 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Harl
 {
 	private:
 
+		/*	Method Private	*/
 		void	debug( void );
 		void	info( void );
 		void	warning( void );
@@ -35,9 +36,11 @@ class Harl
 
 	public:
 
+		/*	Constructor / Destructor	*/
 		Harl( void );
 		~Harl( void );
 
+		/*	Method	*/
 		void	complain( std::string level );
 };
 

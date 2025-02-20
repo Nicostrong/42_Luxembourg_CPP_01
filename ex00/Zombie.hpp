@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 14:59:07 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/12 16:14:05 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 10:09:33 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,15 @@ class Zombie
 
 	public:
 
+		/*	Constructor / Destructor	*/
 		Zombie( const std::string& name );
 		~Zombie();
 
+		/*	Method	*/
 		void			announce( void ) const;
 };
 
+/*	External method	*/
 Zombie*			newZombie( std::string name );
 void			randomChump( std::string name );
 
